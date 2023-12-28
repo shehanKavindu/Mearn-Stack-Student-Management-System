@@ -9,15 +9,15 @@ const PORT = process.env.port || 8070;
 app.use (cors());
 app.use(bodyparser.json());
 
+
 const URL = process.env.MONGODB_URL;
 mongoose.connect(URL,{
-    UseCreateIndex: true.
-    (property) useUnifiedTopologyL: Boolean
+    UseCreateIndex: true
+    (property), useUnifiedTopologyL: Boolean,
     useUnifiedTopologyL: true,
-    useFindAndModify: false
-}
-    
-)
+    useUnifiedTopologyL: false
+
+})
 
 
 
