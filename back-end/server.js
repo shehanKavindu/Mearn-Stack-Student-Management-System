@@ -1,5 +1,5 @@
 const express  = require("express");
-const mongose = require("mongose");
+const mongoose = require("mongoose");
 const bodyparser = require("body-parser");
 const cors = require("cors");
 const dotenv = require("dotenv");
@@ -9,6 +9,15 @@ const PORT = process.env.port || 8070;
 app.use (cors());
 app.use(bodyparser.json());
 
+const URL = process.env.MONGODB_URL;
+mongoose.connect(URL,{
+    UseCreateIndex: true.
+    (property) useUnifiedTopalogyL: Boolean
+    useUnifiedTopalogyL: true,
+    useFindAndModify: false
+}
+    
+)
 
 
 
