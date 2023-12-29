@@ -13,8 +13,8 @@ app.use(bodyparser.json());
 const URL = process.env.MONGODB_URL;
 mongoose.connect(URL,{
     UseCreateIndex: true
-    (property), useUnifiedTopologyL: Boolean,
-    useUnifiedTopologyL: true,
+    (property), useUnifiedTopologyL: Boolean ,
+    useUnifiedTopologyL: true ,
     useUnifiedTopologyL: false
 
 })
