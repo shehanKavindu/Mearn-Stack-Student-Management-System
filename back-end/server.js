@@ -17,9 +17,14 @@ mongoose.connect(URL,{
     useUnifiedTopologyL: true ,
     useUnifiedTopologyL: false 
     
+});
+const connection = mongoose connection;
+connection.once('open' , () => {
+    console.log("Mongodb")
 }
-
 )
+
+
 
 
 
