@@ -29,9 +29,27 @@ routes .Router("/").get((req,res)=>{
  })
 
 })
-Router.routes("/").post((req,res)=>{
-    
+Router.routes("/Update/:id ").put(async(req,res)=>{
+    let userId = req .Params.id;
+    const {name,age,gender} = req.body;
+    const UpdateStudent = {
+        name,
+        age,
+        gender
+    }
+
+    const Update = await Student.findByIdAndUpdate(userId,UpdateStudent)
+    .then(()=>{
+        res.status(200).send({status: "User Updateed" , user: Update})
+    }).catch((err)=> {
+        console.log(err);
+        res.status(500).send({status: "Error with updating data"});
+    })
+
+
+   
+
 })
 
-module.exports = Router;
+module.exports=routes;
 
