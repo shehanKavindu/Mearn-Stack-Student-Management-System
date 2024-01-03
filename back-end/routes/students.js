@@ -46,10 +46,22 @@ Router.routes("/Update/:id ").put(async(req,res)=>{
         res.status(500).send({status: "Error with updating data"});
     })
 
-
-   
-
 })
+
+Router.routes("/Delete/:id ").delete(async(req,res)=>{
+    let userId = req.Params.id;
+    await Student . findByIdAndDelete(userId)
+    .then(()=>{
+        res.status(200).send({status: "User Deleted"});
+      })  .catch((err)=> {
+        console.log(err.message);
+     
+        res.status(500).send({status: "Error with delete user", error: err.message});
+    })
+
+    })
+    Router.routes("/get/:id").get(async(req,res))
+
 
 module.exports=routes;
 
