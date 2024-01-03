@@ -20,9 +20,15 @@ mongoose.connect(URL,{
 });
 const connection = mongoose connection;
 connection.once('open' , () => {
-    console.log("Mongodb")
-}
-)
+    console.log("Mongodb Connection success!");
+})
+const studentRouter = require("./routes/students.js");
+
+app.use("./Student",studentRouter);
+app.listen(PORT, () =>{
+    console.log('Server is up and running on port number: ${PORT}')
+})
+
 
 
 
