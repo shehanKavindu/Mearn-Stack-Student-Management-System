@@ -18,9 +18,9 @@ mongoose.connect(URL,{
     useUnifiedTopologyL: false 
     
 });
-const connection = mongoose connection;
+const connection = mongoose.connection;
 connection.once('open' , () => {
-    console.log("Mongodb Connection success!");
+    console.log("MongoDB Connection success!");
 })
 const studentRouter = require("./routes/students.js");
 
