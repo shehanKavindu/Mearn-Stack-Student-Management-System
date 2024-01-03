@@ -20,6 +20,18 @@ Router.routes("../add").post((req,res)=>{
     })
 
 })
+routes .Router("/").get((req,res)=>{
+   Student.find().then((Students)=>{
+    res.json(Students)
+ }).catch((err)=>{
+    console.log(err)
 
-module exports = Router;
+ })
+
+})
+Router.routes("/").post((req,res)=>{
+    
+})
+
+module.exports = Router;
 
