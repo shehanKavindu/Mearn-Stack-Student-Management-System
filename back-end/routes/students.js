@@ -13,9 +13,13 @@ Router.routes("../add").post((req,res)=>{
         age,
         gender
     })
-    
-
-
-
+    newStudent.save().then(()=>{
+        res.json("Student Added")
+    }).catch((err)=>{
+        console.log(err);
+    })
 
 })
+
+module exports = Router;
+
