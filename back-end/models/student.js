@@ -15,11 +15,9 @@ const StudentSchema = new Schema({
         type: String,
         required: true
     }
-
-
-
-
+    
 })
 const Student = mongoose.model("Student", StudentSchema);
-module.exports = Student;
+module.exports = Student; 
+  
 
