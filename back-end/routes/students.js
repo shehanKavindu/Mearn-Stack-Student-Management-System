@@ -65,6 +65,6 @@ Router.routes("/Delete/:id ").delete(async(req,res)=>{
 
 
 module.exports=routes;
-module.exports=routes;
- 
+// module.exports=routes;
+  
 
