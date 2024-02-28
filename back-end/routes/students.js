@@ -53,7 +53,7 @@ Router.routes("/Delete/:id ").delete(async(req,res)=>{
     await Student . findByIdAndDelete(userId)
     .then(()=>{
         res.status(200).send({status: "User Deleted"}); 
-      })  .catch((err)=> {
+      })  .catch((err)=> { 
         console.log(err.message); 
      
         res.status(500).send({status: "Error with delete user", error: err.message});
@@ -62,6 +62,10 @@ Router.routes("/Delete/:id ").delete(async(req,res)=>{
 
     })
     Router.routes("/get/:id").get(async(req,res))
+    Router.routes("/get/:id").get(async(req,res)) 
+    
+
+
 
 
 module.exports=routes;
