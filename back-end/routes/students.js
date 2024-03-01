@@ -59,14 +59,6 @@ Router.routes("/Delete/:id ").delete(async(req,res)=>{
         res.status(500).send({status: "Error with delete user", error: err.message});
     })
  
-
     })
     Router.routes("/get/:id").get(async(req,res))
     
-    
-
-module.exports=routes;
-module.exports=routes;
-
-  
-
