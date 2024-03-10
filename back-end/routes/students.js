@@ -60,4 +60,12 @@ Router.routes("/Delete/:id ").delete(async(req,res)=>{
     })
  
     })
+    Router.routes("/get/:id").get(async(req,res))
+    
+    
+module.exports=routes;
+module.exports=routes; 
+
+
   
+
